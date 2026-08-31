@@ -180,20 +180,37 @@
   }
   .day:last-child{border-bottom:none;}
   .day-label{
-    font-family:'Betterlett',serif;
+    font-family:'Bodoni Moda',serif;
     font-style:italic;
     color:var(--bordeaux);
-    font-size:1.2rem;
+    font-size:1rem;
     letter-spacing:.05em;
     padding-top:.15rem;
+  }
+  .day-content{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    width:100%;
+  }
+  .day-img{
+    width:100%;
+    max-width:480px;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+  }
+  .day-text{
+    width:100%;
   }
   .day-label small{
     display:block;
     font-family:'Lora',serif;
     font-style:normal;
     color:var(--muted);
-    font-size:.92rem;
-    letter-spacing:.1em;
+    font-size:.72rem;
+    letter-spacing:.14em;
     text-transform:uppercase;
     margin-top:.25rem;
   }
