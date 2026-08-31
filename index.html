@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>法國深度漫遊 — 15天14夜</title>
+<title>法國精華之旅 — 15天14夜</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Parisienne&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.script{font-family:'Bodoni Moda',serif;}
-  .script{font-family:'Betterlett',cursive;}
+  .script{font-family:'Betterlett','Parisienne',cursive;}
 
   /* ===== 三色徽記線 (signature motif) ===== */
   .tricolore{
@@ -71,7 +71,7 @@
     pointer-events:none;
   }
   .hero .eyebrow{
-    font-family:'betterlett',cursive;
+    font-family:'Parisienne',cursive;
     font-size:clamp(1.6rem,3vw,2.2rem);
     color:var(--gold-light);
     margin-bottom:.5rem;
@@ -79,7 +79,7 @@
     z-index:1;
   }
   .hero h1{
-    font-size:clamp(2.8rem,7.2vw,5.3rem);
+    font-size:clamp(2.6rem,7vw,5.2rem);
     font-weight:700;
     letter-spacing:.04em;
     z-index:1;
@@ -93,10 +93,10 @@
   .hero .sub{
     z-index:1;
     margin-top:1.4rem;
-    font-size:clamp(1.5rem,2.6vw,1.9rem);
-    font-family:'Betterlett',cursive;
+    font-size:clamp(1.3rem,2.4vw,1.7rem);
+    font-family:'Betterlett','Parisienne',cursive;
     color:var(--gold-light);
-    letter-spacing:.04em;
+    letter-spacing:.1em;
     text-transform:capitalize;
   }
   .hero .frame{
@@ -147,7 +147,7 @@
     letter-spacing:.02em;
   }
   .chapter-title .city-en{
-    font-family:'Betterlett',serif;
+    font-family:'Lora',serif;
     font-style:italic;
     color:var(--bordeaux);
     font-size:1.25rem;
@@ -231,13 +231,14 @@
   /* ===== 各城市專屬漸層底色 ===== */
   /* I 巴黎 — 花都夜色：午夜藍漸層至香檳玫瑰金，呼應鐵塔燈火與美好年代 */
   .chapter-paris{
-        background:linear-gradient(165deg,#1B2A42 0%,#445069 55%,#B8AFA0 92%);
+    background:linear-gradient(165deg,#1B2A42 0%,#445069 55%,#B8AFA0 92%);
     --ink:#F4ECE0;
-    --bordeaux:#E8C9A0;
+    --bordeaux:#D9B876;
     --marine:#F4ECE0;
-    --gold:#E3C88C;
-    --muted:rgba(244,236,224,.62);
+    --gold:#D9B876;
+    --muted:rgba(244,236,224,.6);
     --divider:rgba(244,236,224,.18);
+    text-shadow:0 2px 10px rgba(0,20,30,.4);
   }
   /* II 波爾多 — 酒鄉：深石榴紅漸層至溫潤酒紅，呼應葡萄酒與磚紅古城 */
   .chapter-bordeaux{
@@ -297,9 +298,9 @@
 
   <section class="hero">
     <div class="eyebrow">Un Voyage en France</div>
-    <img class="hero-title-img" src="5E7316C4-03BA-4103-8B74-5B62170B4208.png" alt="法式漫遊">
+    <img class="hero-title-img" src="hero-title.png" alt="法式漫遊">
     <div class="sub">Paris · Bordeaux · Provence · Nice</div>
-    <div class="frame">15 Jours · 14 Nuits<span>十五天十四夜 · 深度法式</span></div>
+    <div class="frame">15 Jours · 14 Nuits<span>十五天十四夜 · 法式慢遊</span></div>
   </section>
   <div class="tricolore"></div>
 
@@ -321,8 +322,9 @@
     <div class="days">
       <div class="day">
         <div class="day-label">Day 1<small>抵達</small></div>
-        <div class="day-content"><div class="route">抵達巴黎<span class="arrow">·</span>入住市區飯店<span class="arrow">·</span>法式小酒館晚餐</div></div>
-        <img class="day-img" src="22EC881F-FB13-4A35-9BD6-260FA50FA8BD.png">
+        <div class="day-content">
+          <div class="day-text"><div class="route">抵達巴黎<span class="arrow">·</span>入住市區飯店<span class="arrow">·</span>法式小酒館晚餐</div></div>
+          <img class="day-img" src="images/day1.jpg">
         </div>
       </div>
       <div class="day">
@@ -419,8 +421,8 @@
         <div class="day-content"><div class="route">尼斯舊城區<span class="arrow">→</span>薩勒亞花市<span class="arrow">→</span>蔚藍海岸沙灘</div></div>
       </div>
       <div class="day">
-        <div class="day-label">Day 14<small>芒通與摩納哥</small></div>
-        <div class="day-content"><div class="route">包車前往<b>檸檬小鎮芒通</b><span class="arrow">→</span>摩納哥</div></div>
+        <div class="day-label">Day 14<small>鷹巢村與摩納哥</small></div>
+        <div class="day-content"><div class="route">包車前往<b>埃茲懸崖鷹巢村</b><span class="arrow">→</span>摩納哥</div></div>
       </div>
       <div class="day">
         <div class="day-label">Day 15<small>返程</small></div>
