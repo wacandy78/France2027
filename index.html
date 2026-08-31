@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>法國精華之旅 — 15天14夜</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F3ECDD;
+    --paper:#FAF6EC;
+    --ink:#2B241E;
+    --bordeaux:#7A1F2B;
+    --marine:#1F2C42;
+    --gold:#B08D57;
+    --gold-light:#D8C39A;
+    --muted:#7a7062;
+    --divider:rgba(122,31,43,.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Lora',serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.script{font-family:'Bodoni Moda',serif;}
+  .script{font-family:'Parisienne',cursive;}
+
+  /* ===== 三色徽記線 (signature motif) ===== */
+  .tricolore{
+    height:4px;
+    width:100%;
+    background:linear-gradient(90deg,
+      var(--marine) 0%, var(--marine) 33.3%,
+      #ffffff 33.3%, #ffffff 66.6%,
+      var(--bordeaux) 66.6%, var(--bordeaux) 100%);
+    opacity:.85;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:6vh 6vw;
+    background:
+      radial-gradient(ellipse at top, rgba(176,141,87,.18), transparent 60%),
+      var(--marine);
+    color:var(--cream);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(176,141,87,.05) 0 2px, transparent 2px 40px),
+      repeating-linear-gradient(-45deg, rgba(176,141,87,.05) 0 2px, transparent 2px 40px);
+    pointer-events:none;
+  }
+  .hero .eyebrow{
+    font-family:'Parisienne',cursive;
+    font-size:clamp(1.6rem,3vw,2.2rem);
+    color:var(--gold-light);
+    margin-bottom:.5rem;
+    letter-spacing:.02em;
+    z-index:1;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,7vw,5.2rem);
+    font-weight:700;
+    letter-spacing:.04em;
+    z-index:1;
+  }
+  .hero-title-img{
+    width:min(560px,78vw);
+    height:auto;
+    z-index:1;
+    filter:drop-shadow(0 4px 18px rgba(0,0,0,.35));
+  }
+  .hero .sub{
+    z-index:1;
+    margin-top:1.4rem;
+    font-size:clamp(1rem,1.6vw,1.15rem);
+    color:var(--gold-light);
+    letter-spacing:.15em;
+    text-transform:uppercase;
+  }
+  .hero .frame{
+    z-index:1;
+    margin-top:2.6rem;
+    border:1px solid var(--gold);
+    padding:1.1rem 2.2rem;
+    font-size:.85rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--cream);
+  }
+  .hero .frame span{display:block;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1rem;color:var(--gold-light);margin-top:.4rem;letter-spacing:.05em;text-transform:none;}
+
+  /* ===== INTRO STRIP ===== */
+  .intro{
+    max-width:760px;
+    margin:5.5rem auto;
+    padding:0 6vw;
+    text-align:center;
+  }
+  .intro .script{font-size:2rem;color:var(--bordeaux);}
+  .intro p{font-size:1.05rem;color:#4a4136;margin-top:1rem;}
+
+  /* ===== CHAPTERS ===== */
+  .chapter{
+    position:relative;
+    padding:5rem 6vw 6rem;
+  }
+  .chapter-head{
+    max-width:900px;
+    margin:0 auto 3.2rem;
+    display:flex;
+    align-items:baseline;
+    gap:1.6rem;
+  }
+  .chapter-num{
+    font-family:'Bodoni Moda',serif;
+    font-style:italic;
+    font-size:clamp(3.2rem,6vw,4.6rem);
+    color:var(--gold);
+    line-height:1;
+    flex-shrink:0;
+  }
+  .chapter-title h2{
+    font-size:clamp(1.8rem,3.4vw,2.6rem);
+    color:var(--ink);
+    letter-spacing:.02em;
+  }
+  .chapter-title .city-en{
+    font-family:'Lora',serif;
+    font-style:italic;
+    color:var(--bordeaux);
+    font-size:.95rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    margin-top:.3rem;
+  }
+  .chapter-title .nights{
+    display:inline-block;
+    margin-top:.6rem;
+    font-size:.8rem;
+    letter-spacing:.1em;
+    color:var(--muted);
+    text-transform:uppercase;
+  }
+
+  .days{
+    max-width:900px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .day{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:1.6rem;
+    padding:1.8rem 0;
+    border-bottom:1px solid var(--divider);
+  }
+  .day:last-child{border-bottom:none;}
+  .day-label{
+    font-family:'Bodoni Moda',serif;
+    font-style:italic;
+    color:var(--bordeaux);
+    font-size:1rem;
+    letter-spacing:.05em;
+    padding-top:.15rem;
+  }
+  .day-label small{
+    display:block;
+    font-family:'Lora',serif;
+    font-style:normal;
+    color:var(--muted);
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    margin-top:.25rem;
+  }
+  .day-content .route{
+    font-size:1.02rem;
+    color:var(--ink);
+  }
+  .day-content .route b{
+    color:var(--marine);
+    font-weight:600;
+  }
+  .day-content .route .arrow{
+    color:var(--gold);
+    margin:0 .4rem;
+    font-style:italic;
+  }
+
+  /* ===== 各城市專屬漸層底色 ===== */
+  /* I 巴黎 — 花都夜色：午夜藍漸層至香檳玫瑰金，呼應鐵塔燈火與美好年代 */
+  .chapter-paris{
+    background:linear-gradient(150deg,#161F35 0%,#332A47 48%,#6E4A58 100%);
+    --ink:#F4ECE0;
+    --bordeaux:#E8C9A0;
+    --marine:#F4ECE0;
+    --gold:#E3C88C;
+    --muted:rgba(244,236,224,.62);
+    --divider:rgba(244,236,224,.18);
+  }
+  /* II 波爾多 — 酒鄉：深石榴紅漸層至溫潤酒紅，呼應葡萄酒與磚紅古城 */
+  .chapter-bordeaux{
+    background:linear-gradient(150deg,#33070E 0%,#651B22 50%,#8C3A3F 100%);
+    --ink:#F5E8DD;
+    --bordeaux:#E8C08A;
+    --marine:#F5E8DD;
+    --gold:#D9A85C;
+    --muted:rgba(245,232,221,.6);
+    --divider:rgba(245,232,221,.18);
+  }
+  /* III 普羅旺斯 — 薰衣草田：紫色漸層至向日葵金黃 */
+  .chapter-provence{
+    background:linear-gradient(150deg,#4B3A6B 0%,#7C5F93 50%,#D4A857 100%);
+    --ink:#FBF3E4;
+    --bordeaux:#FBF3E4;
+    --marine:#3A2A1A;
+    --gold:#FBF3E4;
+    --muted:rgba(251,243,228,.68);
+    --divider:rgba(251,243,228,.22);
+  }
+  /* IV 尼斯 — 蔚藍海岸：地中海藍綠漸層 */
+  .chapter-nice{
+    background:linear-gradient(150deg,#0C333C 0%,#146874 50%,#3FA9AB 100%);
+    --ink:#F2F6E9;
+    --bordeaux:#E9D9A0;
+    --marine:#F2F6E9;
+    --gold:#E9D9A0;
+    --muted:rgba(242,246,233,.62);
+    --divider:rgba(242,246,233,.2);
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--marine);
+    color:var(--gold-light);
+    text-align:center;
+    padding:4.5rem 6vw 3rem;
+  }
+  footer .script{font-size:1.9rem;color:var(--cream);margin-bottom:.6rem;}
+  footer p{font-size:.85rem;letter-spacing:.08em;color:#9aa4b8;}
+  footer .route-summary{
+    max-width:640px;
+    margin:1.6rem auto 0;
+    font-size:.82rem;
+    color:#c9b98f;
+    letter-spacing:.05em;
+  }
+
+  @media(max-width:640px){
+    .day{grid-template-columns:80px 1fr;gap:1rem;}
+    .chapter-head{gap:1rem;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="eyebrow">Un Voyage en France</div>
+    <img class="hero-title-img" src="assets/hero-title.png" alt="法式漫遊">
+    <div class="sub">Paris · Bordeaux · Provence · Nice</div>
+    <div class="frame">15 Jours · 14 Nuits<span>十五天十四夜 · 法式慢遊</span></div>
+  </section>
+  <div class="tricolore"></div>
+
+  <section class="intro">
+    <div class="script">De Paris à la Côte d'Azur</div>
+    <p>從塞納河畔的優雅巴黎，到波爾多的葡萄酒鄉；從普羅旺斯的薰衣草花海，到蔚藍海岸的碧海晴空 — 一場橫貫法國四大風情的深度旅程。</p>
+  </section>
+
+  <!-- 第一章 巴黎 -->
+  <section class="chapter chapter-paris">
+    <div class="chapter-head">
+      <div class="chapter-num">I</div>
+      <div class="chapter-title">
+        <h2>巴黎</h2>
+        <div class="city-en">Paris</div>
+        <div class="nights">4 晚</div>
+      </div>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="day-label">Day 1<small>抵達</small></div>
+        <div class="day-content"><div class="route">抵達巴黎<span class="arrow">·</span>入住市區飯店<span class="arrow">·</span>法式小酒館晚餐</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 2<small>鐵塔與塞納河</small></div>
+        <div class="day-content"><div class="route"><b>艾菲爾鐵塔</b><span class="arrow">→</span>塞納河遊船<span class="arrow">→</span>夜訪歌舞秀劇院</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 3<small>歌劇與藝術</small></div>
+        <div class="day-content"><div class="route"><b>巴黎歌劇院</b><span class="arrow">→</span>夜遊<b>羅浮宮</b></div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 4<small>市集與博物館</small></div>
+        <div class="day-content"><div class="route">巴士底市集<span class="arrow">→</span><b>奧賽博物館</b><span class="arrow">→</span>瑪黑區</div></div>
+      </div>
+    </div>
+  </section>
+  <div class="tricolore"></div>
+
+  <!-- 第二章 波爾多 -->
+  <section class="chapter chapter-bordeaux">
+    <div class="chapter-head">
+      <div class="chapter-num">II</div>
+      <div class="chapter-title">
+        <h2>波爾多</h2>
+        <div class="city-en">Bordeaux</div>
+        <div class="nights">4 晚</div>
+      </div>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="day-label">Day 5<small>高鐵南下</small></div>
+        <div class="day-content"><div class="route">搭乘 TGV 高鐵前往波爾多<span class="arrow">→</span><b>波爾多大劇院</b><span class="arrow">→</span>水鏡廣場</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 6<small>教堂巡禮</small></div>
+        <div class="day-content"><div class="route"><b>波爾多主教座堂</b><span class="arrow">→</span>聖彌額爾聖殿<span class="arrow">→</span>聖塞味利聖殿</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 7<small>酒鄉古鎮</small></div>
+        <div class="day-content"><div class="route">包車前往<b>聖艾米利永古鎮</b><span class="arrow">→</span>列級酒莊品酒體驗</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 8<small>市場與紅酒</small></div>
+        <div class="day-content"><div class="route">卡普辛市場<span class="arrow">→</span>紅酒博物館</div></div>
+      </div>
+    </div>
+  </section>
+  <div class="tricolore"></div>
+
+  <!-- 第三章 普羅旺斯 -->
+  <section class="chapter chapter-provence">
+    <div class="chapter-head">
+      <div class="chapter-num">III</div>
+      <div class="chapter-title">
+        <h2>普羅旺斯</h2>
+        <div class="city-en">Provence</div>
+        <div class="nights">3 晚</div>
+      </div>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="day-label">Day 9<small>高鐵轉場</small></div>
+        <div class="day-content"><div class="route">搭乘 TGV 高鐵前往普羅旺斯</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 10<small>花海與湖光</small></div>
+        <div class="day-content"><div class="route">包車前往<b>瓦倫索薰衣草花海</b><span class="arrow">→</span>聖十字湖</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 11<small>山城秘境</small></div>
+        <div class="day-content"><div class="route">呂貝隆山城包車<span class="arrow">→</span><b>戈爾代石頭城</b><span class="arrow">→</span>紅土城<span class="arrow">→</span>塞南克修道院</div></div>
+      </div>
+    </div>
+  </section>
+  <div class="tricolore"></div>
+
+  <!-- 第四章 尼斯 -->
+  <section class="chapter chapter-nice">
+    <div class="chapter-head">
+      <div class="chapter-num">IV</div>
+      <div class="chapter-title">
+        <h2>尼斯 & 蔚藍海岸</h2>
+        <div class="city-en">Nice & Côte d'Azur</div>
+        <div class="nights">3 晚</div>
+      </div>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="day-label">Day 12<small>高鐵南行</small></div>
+        <div class="day-content"><div class="route">搭乘 TGV 高鐵前往尼斯<span class="arrow">→</span>盎格魯街海濱漫步</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 13<small>舊城與花市</small></div>
+        <div class="day-content"><div class="route">尼斯舊城區<span class="arrow">→</span>薩勒亞花市<span class="arrow">→</span>蔚藍海岸沙灘</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 14<small>鷹巢村與摩納哥</small></div>
+        <div class="day-content"><div class="route">包車前往<b>埃茲懸崖鷹巢村</b><span class="arrow">→</span>摩納哥</div></div>
+      </div>
+      <div class="day">
+        <div class="day-label">Day 15<small>返程</small></div>
+        <div class="day-content"><div class="route">尼斯機場（NCE）返程</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="script">Bon Voyage</div>
+    <p>MEDIUM SIRA SERVICE · FRANCE COLLECTION</p>
+    <div class="route-summary">巴黎 4 晚 · 波爾多 4 晚 · 普羅旺斯 3 晚 · 尼斯 3 晚 — 15 天 14 夜法國精華路線</div>
+  </footer>
+
+</body>
+</html>
